@@ -1,0 +1,11 @@
+[package]
+name = "gw2load"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+default = ["log"]
+
+[dependencies.log]
+version = "0.4.28"
+optional = true
