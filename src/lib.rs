@@ -174,7 +174,10 @@ pub fn init(handle: *const ()) {
         HANDLE = handle as usize;
     }
     #[cfg(feature = "log")]
-    log::set_logger(&logger::LOGGER).ok();
+    {
+        log::set_logger(&logger::LOGGER).ok();
+        log::set_max_level(log::LevelFilter::Trace);
+    }
 }
 
 #[cfg(feature = "log")]
